@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+
+  padding: 1rem;
+}
+
+.container{
+  column-gap: 1rem;
+}
+
+.container > div {
+  break-inside: avoid;
+  margin-bottom: .8rem;
+}
+
+.container img {
+  width: 100%;  
+  border-radius: .4rem;
+}
+
+@media screen and (min-width: 769px) {
+  .container {
+    columns: 2;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    columns: 3;
+  }
+}
