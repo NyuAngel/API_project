@@ -5,6 +5,8 @@ function App() {
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState();
+  
+  
 
   useEffect(() => {
     const fetchData = () =>
@@ -23,11 +25,13 @@ function App() {
   }
 
   return (
+     
       <div className="container">
         {data?.map((cat) => (
           <div key={cat.id}>
             <img src={cat.url} alt="cat" />
-          </div>
+            </div>
+          
         ))}
       </div>
     

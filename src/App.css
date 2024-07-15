@@ -10,12 +10,12 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-
   padding: 1rem;
 }
 
 .container{
   column-gap: 1rem;
+  gap: 10px; /* Espacio entre las imágenes */
 }
 
 .container > div {
@@ -26,7 +26,14 @@ body {
 .container img {
   width: 100%;  
   border-radius: .4rem;
+  transition: transform 0.3s ease; /* Transición para efecto al pasar el cursor */ 
+  }
+ 
+  .container img:hover {
+    transform: scale(1.05); /* Escala ligeramente al pasar el cursor */
+  
 }
+
 
 @media screen and (min-width: 769px) {
   .container {
@@ -34,8 +41,9 @@ body {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .container {
     columns: 3;
   }
 }
+
