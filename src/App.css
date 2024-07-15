@@ -1,31 +1,39 @@
+/*Reset de estilos */ 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;  /*Modelo de caja para que su diseño sea fluido y controle el tamaño de los elementos*/
 }
 
+/* Estilos para el cuerpo */
 body {
   margin: 0;
-  display: flex;
+  display: flex; 
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  padding: 1rem;
+  padding: 1rem; /* Agrega un relleno interno de 1 rem al cuerpo*/
 }
 
+/*Estilos aplicados al contenedor que envuelve las imágenes*/
 .container{
-  column-gap: 1rem;
+  column-gap: 1rem; /*  Establece un espacio de separación  */
   gap: 10px; /* Espacio entre las imágenes */
 }
 
+/*Estilos para el contenedor principal */
+
 .container > div {
-  break-inside: avoid;
-  margin-bottom: .8rem;
+  break-inside: avoid; /* Evita que los elementos (div) dentro del contenedor se rompan entre columnas.*/ 
+  margin-bottom: .8rem; /* Esto proporciona espacio visual entre las imágenes.*/
+  
 }
+
+/*Estilos para las imágenes */
 
 .container img {
   width: 100%;  
-  border-radius: .4rem;
+  border-radius: .4rem; /*Aplica bordes redondeados a las imágenes para suavizar sus esquinas*/
   transition: transform 0.3s ease; /* Transición para efecto al pasar el cursor */ 
   }
  
@@ -34,13 +42,22 @@ body {
   
 }
 
+h1#title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin: 10px;
+
+}
+
+/*Media Queries*/
+/*Cuando el ancho de la pantalla sea al menos 769px, cambia el diseño del contenedor a 2 columnas*/
 
 @media screen and (min-width: 769px) {
   .container {
     columns: 2;
-  }
+  } 
 }
-
+/*Cuando el ancho de la pantalla sea al menos 1024px, cambia el diseño del contenedor a 3 columnas*/
 @media screen and (min-width: 1024px) {
   .container {
     columns: 3;
